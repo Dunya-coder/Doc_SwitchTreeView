@@ -14,14 +14,14 @@ You can show switch document
 
 
      this.SuspendLayout();
-\\\
+
      // Initialize treeView1.
      treeView11.Location = new Point(0, 25);
      treeView11.Size = new Size(292, 248);
      treeView11.Anchor = AnchorStyles.Top | AnchorStyles.Left |
          AnchorStyles.Bottom | AnchorStyles.Right;
      treeView11.CheckBoxes = true;
-\\\Cs
+
      // Add nodes to treeView1.
      TreeNode node;
      for (int x = 0; x < 3; ++x)
@@ -38,7 +38,7 @@ You can show switch document
      // Set the checked state of one of the nodes to
      // demonstrate the showCheckedNodesButton button behavior.
      treeView11.Nodes[1].Nodes[0].Nodes[0].Checked = true;
-\\\
+
      // Initialize showCheckedNodesButton.
      showCheckedNodesButton.Size = new Size(144, 24);
      showCheckedNodesButton.Text = "Show Checked Nodes";
@@ -57,7 +57,7 @@ You can show switch document
      // Disable redrawing of treeView1 to prevent flickering 
      // while changes are made.
      treeView11.BeginUpdate();
-\\\Cs
+
      // Collapse all nodes of treeView1.
      treeView11.ExpandAll();
 
@@ -67,7 +67,7 @@ You can show switch document
      // Expand all nodes of treeView1. Nodes without checked children are 
      // prevented from expanding by the checkForCheckedChildren event handler.
      treeView11.CollapseAll();
-\\\
+
      // Remove the checkForCheckedChildren event handler from the BeforeExpand 
      // event so manual node expansion will work correctly.
      treeView11.BeforeCollapse -= checkForCheckedChildren;
